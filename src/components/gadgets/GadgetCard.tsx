@@ -20,7 +20,7 @@ export default function GadgetCard({ gadget, onEdit, onDelete }: GadgetCardProps
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+      className="bg-white dark:bg-zinc-900 rounded-lg shadow-lg overflow-hidden"
     >
       <div className="aspect-video relative">
         <img
@@ -35,7 +35,7 @@ export default function GadgetCard({ gadget, onEdit, onDelete }: GadgetCardProps
                 onClick={() => onEdit(gadget.id)}
                 className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                <Edit className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+                <Edit className="h-4 w-4 text-gray-600 dark:text-white" />
               </button>
             )}
             {onDelete && (

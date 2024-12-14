@@ -25,18 +25,18 @@ export default function Navbar() {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+              <Link to="/" className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
                 Features
               </Link>
-              <Link to="/" className="text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+              <Link to="/" className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
                 Gadgets
               </Link>
               {user && (
-                <Link to="/my-gadgets" className="text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+                <Link to="/my-gadgets" className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
                   My Gadgets
                 </Link>
               )}
-              <Link to="/contact" className="text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+              <Link to="/contact" className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
                 Contact
               </Link>
               <ThemeToggle />

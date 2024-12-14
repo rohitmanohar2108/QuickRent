@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Camera, Smartphone, Laptop, Gamepad, Plus } from 'lucide-react';
+import { Camera, Smartphone, Laptop, Gamepad, Plus, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
@@ -41,14 +41,14 @@ export default function ListGadgetForm() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-4xl mx-auto px-4 py-12"
+      className="max-w-4xl mx-auto px-4 py-12 "
     >
       <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
         List Your Gadget
       </h1>
 
       <form onSubmit={handleSubmit} className="space-y-8">
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 space-y-6">
+        <div className="bg-white dark:bg-zinc-900 rounded-lg shadow p-6 space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
               Gadget Title
@@ -56,8 +56,9 @@ export default function ListGadgetForm() {
             <input
               type="text"
               value={formData.title}
+              placeholder="Your Gadget"
               onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              className="mt-1 block p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               required
             />
           </div>
@@ -74,11 +75,11 @@ export default function ListGadgetForm() {
                   onClick={() => setFormData(prev => ({ ...prev, category: category.id }))}
                   className={`p-4 rounded-lg border-2 ${
                     formData.category === category.id
-                      ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900'
+                      ? 'border-rose-400 bg-rose-50 dark:bg-rose-600'
                       : 'border-gray-200 dark:border-gray-700'
                   } flex flex-col items-center space-y-2`}
                 >
-                  <category.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                  <category.icon className="h-6 w-6 text-rose-600 dark:text-white" />
                   <span className="text-sm font-medium text-gray-900 dark:text-white">
                     {category.name}
                   </span>
@@ -93,22 +94,23 @@ export default function ListGadgetForm() {
             </label>
             <textarea
               value={formData.description}
+              placeholder="Gadget Description"
               onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
               rows={4}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              className="mt-1 block p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label className="block text-sm  font-medium text-gray-700 dark:text-gray-300">
               Daily Rate ($)
             </label>
             <input
               type="number"
               value={formData.dailyRate}
               onChange={(e) => setFormData(prev => ({ ...prev, dailyRate: e.target.value }))}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              className="mt-1 block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               required
             />
           </div>
@@ -121,7 +123,7 @@ export default function ListGadgetForm() {
               <button
                 type="button"
                 onClick={addFeature}
-                className="flex items-center text-sm text-indigo-600 dark:text-indigo-400"
+                className="flex items-center  text-sm text-rose-600 dark:text-rose-600"
               >
                 <Plus className="h-4 w-4 mr-1" />
                 Add Feature
@@ -138,7 +140,7 @@ export default function ListGadgetForm() {
                     newFeatures[index] = e.target.value;
                     setFormData(prev => ({ ...prev, features: newFeatures }));
                   }}
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  className="block w-full rounded-md p-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   placeholder={`Feature ${index + 1}`}
                   required
                 />
@@ -163,7 +165,7 @@ export default function ListGadgetForm() {
                   </button>
                 </div>
               ))}
-              <label className="aspect-square rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-400">
+              <label className="aspect-square rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center cursor-pointer hover:border-rose-600 dark:hover:border-rose-600">
                 <input
                   type="file"
                   className="hidden"
@@ -188,13 +190,13 @@ export default function ListGadgetForm() {
           <button
             type="button"
             onClick={() => navigate('/')}
-            className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 dark:text-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
+            className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 dark:text-gray-300 dark:border-gray-600 hover:bg-rose-50 dark:hover:bg-gray-800"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+            className="px-6 py-2 bg-rose-600 text-white rounded-md hover:bg-rose-600/90"
           >
             List Gadget
           </button>

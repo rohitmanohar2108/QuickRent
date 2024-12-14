@@ -39,7 +39,7 @@ export default function ListedGadgets() {
       animate={{ opacity: 1 }}
       className="max-w-7xl mx-auto px-4 py-12"
     >
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+      <h1 className="text-3xl font-bold text-gary-800 dark:text-white mb-8">
         Your Listed Gadgets
       </h1>
 

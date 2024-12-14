@@ -13,7 +13,7 @@ export default function App() {
     <ThemeProvider>
       <AuthProvider>
         <Router>
-          <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+          <div className="min-h-screen bg-white dark:bg-black transition-colors duration-200">
             <Navbar />
             <div className="pt-16">
               <Routes>
