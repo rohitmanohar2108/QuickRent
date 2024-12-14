@@ -14,7 +14,7 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Background overlay */}
+          
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -23,7 +23,6 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
             className="fixed inset-0 bg-black/50 z-50"
           />
 
-          {/* Modal container */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -31,7 +30,7 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
             className="fixed inset-0 flex items-center justify-center z-50"
           >
             <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-xl w-11/12 sm:max-w-md">
-              {/* Modal header */}
+             
               <div className="flex items-center justify-between p-4 border-b dark:border-gray-700">
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h2>
                 <button
@@ -42,7 +41,7 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
                 </button>
               </div>
 
-              {/* Modal content */}
+              
               <div className="p-4">{children}</div>
             </div>
           </motion.div>
