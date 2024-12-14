@@ -46,10 +46,10 @@ export default function Features() {
             {features.map((feature) => (
               <div
                 key={feature.name}
-                className="relative bg-white dark:bg-zinc-800 dark:bg-opacity-70 px-6 py-6 hover:shadow-lg rounded-xl"
+                className="relative bg-white dark:bg-zinc-900 dark:bg-opacity-70 px-6 py-6 hover:shadow-lg rounded-xl dark:border border-zinc-700 dark:hover:border-white"
               >
                 <div className="flex flex-col items-start">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-rose-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-rose-600 text-white">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <p className="mt-4 text-xl font-bold text-gray-900 dark:text-white">
