@@ -20,7 +20,7 @@ export default function GadgetCard({ gadget, onEdit, onDelete }: GadgetCardProps
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      className="bg-white dark:bg-zinc-900 rounded-lg shadow-lg overflow-hidden"
+      className="bg-white dark:bg-zinc-900 rounded-lg shadow-lg overflow-hidden dark:border border-zinc-700 dark:hover:border-white"
     >
       <div className="aspect-video relative">
         <img
@@ -65,7 +65,7 @@ export default function GadgetCard({ gadget, onEdit, onDelete }: GadgetCardProps
         <p className="text-sm text-gray-500 dark:text-gray-400 capitalize">
           {gadget.category}
         </p>
-        <p className="mt-2 text-lg font-medium text-indigo-600 dark:text-indigo-400">
+        <p className="mt-2 text-lg font-medium text-rose-600 dark:text-rose-600">
           ${gadget.dailyRate}/day
         </p>
       </div>
