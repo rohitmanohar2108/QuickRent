@@ -40,14 +40,15 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
       >
         {!isSignIn && (
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label className="block text-sm  font-medium text-gray-700 dark:text-gray-300">
               Name
             </label>
             <input
               type="text"
+              placeholder="Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              className="mt-1 block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               required
             />
           </div>
@@ -58,9 +59,10 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
           </label>
           <input
             type="email"
+            placeholder="Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            className="mt-1 block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             required
           />
         </div>
@@ -70,22 +72,23 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
           </label>
           <input
             type="password"
+            placeholder="Your Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            className="mt-1 block w-full  p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             required
           />
         </div>
         <button
           type="submit"
-          className="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors"
+          className="w-full bg-rose-600 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 transition-colors"
         >
           {isSignIn ? 'Sign In' : 'Sign Up'}
         </button>
         <button
           type="button"
           onClick={() => setIsSignIn(!isSignIn)}
-          className="w-full text-indigo-600 dark:text-indigo-400 text-sm mt-4"
+          className="w-full dark:text-white text-gray-700 text-sm mt-4"
         >
           {isSignIn ? "Don't have an account? Sign Up" : 'Already have an account? Sign In'}
         </button>

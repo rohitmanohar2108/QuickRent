@@ -45,7 +45,7 @@ export default function Navbar() {
                   <span className="text-gray-600 dark:text-gray-300">{user.name}</span>
                   <button
                     onClick={signOut}
-                    className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors"
+                    className="bg-rose-600 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 border-b border-rose-400 transition-colors"
                   >
                     Sign Out
                   </button>
@@ -53,7 +53,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setShowAuthModal(true)}
-                  className="bg-rose-500 text-white px-4 py-2 rounded-md hover:bg-rose-600 transition-colors"
+                  className="bg-rose-700 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 border-b border-rose-400 transition-colors"
                 >
                   Sign Up
                 </button>
