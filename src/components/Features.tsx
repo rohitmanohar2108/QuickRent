@@ -1,5 +1,5 @@
 import React from "react";
-import { Package, Clock, Truck, Shield } from "lucide-react";
+import { Package, Clock, Truck, Shield, ShieldCheck, Hourglass, Leaf, Repeat1, Repeat, Headphones, Tag } from "lucide-react";
 
 const features = [
   {
@@ -18,13 +18,37 @@ const features = [
     name: "Flexible Duration",
     description:
       "Rent for a day, week, or month. Extend or return early based on your needs.",
-    icon: Clock,
+    icon: Hourglass,
   },
   {
     name: "Damage Protection",
     description:
       "All rentals come with comprehensive damage protection for peace of mind.",
-    icon: Shield,
+    icon: ShieldCheck,
+  },
+  {
+    name: "Eco-Friendly Packaging",
+    description:
+      "Sustainable and recyclable packaging options to reduce environmental impact.",
+    icon: Leaf,
+  },
+  {
+    name: "Flexible Return Policy",
+    description:
+      "Hassle-free returns and exchanges with clear guidelines.",
+    icon: Repeat,
+  },
+  {
+    name: "24/7 Customer Support",
+    description:
+      "Always-available customer care via chat, email, or phone for quick issue resolution.",
+    icon: Headphones,
+  },
+  {
+    name: "Exclusive Deals and Discounts",
+    description:
+      "Regular sales, limited-time offers, and special deals for members.",
+    icon: Tag,
   },
 ];
 
@@ -46,7 +70,7 @@ export default function Features() {
             {features.map((feature) => (
               <div
                 key={feature.name}
-                className="relative bg-white dark:bg-zinc-900 dark:bg-opacity-70 px-6 py-6 hover:shadow-lg rounded-xl dark:border border-zinc-700 dark:hover:border-white"
+                className="relative bg-white shadow-lg dark:bg-zinc-900 dark:bg-opacity-70 px-6 py-6 hover:shadow-lg rounded-xl dark:border border-zinc-700 dark:hover:border-white"
               >
                 <div className="flex flex-col items-start">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-rose-600 text-white">

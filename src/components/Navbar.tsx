@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, Laptop } from 'lucide-react';
-import { motion } from 'framer-motion';
-import ThemeToggle from './ui/ThemeToggle';
-import AuthModal from './auth/AuthModal';
-import { useAuth } from '../context/AuthContext';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, X, Laptop, User } from "lucide-react";
+import { motion } from "framer-motion";
+import ThemeToggle from "./ui/ThemeToggle";
+import AuthModal from "./auth/AuthModal";
+import { useAuth } from "../context/AuthContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +15,10 @@ export default function Navbar() {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false); // Close the mobile menu after clicking
   };
-
 
   return (
     <>
@@ -29,29 +28,47 @@ export default function Navbar() {
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
                 <Laptop className="h-8 w-8 text-red-600 dark:text-red-600" />
-                <span className="ml-2 text-xl font-bold text-rose-500 dark:text-rose-500">QuickRent</span>
+                <span className="ml-2 text-xl font-bold text-rose-500 dark:text-rose-500">
+                  QuickRent
+                </span>
               </Link>
             </div>
-            
+
             <div className="hidden md:flex items-center space-x-8">
-              <button onClick={() => handleScroll('features')} className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+              <button
+                onClick={() => handleScroll("features")}
+                className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+              >
                 Features
               </button>
-              <button onClick={() => handleScroll('gadgets')} className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+              <button
+                onClick={() => handleScroll("gadgets")}
+                className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+              >
                 Gadgets
               </button>
               {user && (
-                <Link to="/my-gadgets" className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+                <Link
+                  to="/my-gadgets"
+                  className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+                >
                   My Gadgets
                 </Link>
               )}
-              <button onClick={() => handleScroll('contact')} className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600">
+              <button
+                onClick={() => handleScroll("contact")}
+                className="text-rose-600 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+              >
                 Contact
               </button>
               <ThemeToggle />
               {user ? (
-                <div className="flex items-center space-x-4">
-                  <span className="text-gray-600 dark:text-gray-300">{user.name}</span>
+                <div className="flex items-center space-x-3">
+                  <User className=" text-gray-800 dark:text-white" />
+                  <span className="text-gray-600 dark:text-gray-300">
+                    {user.name}
+                  </span>
+
                   <button
                     onClick={signOut}
                     className="bg-rose-600 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 border-b border-rose-400 transition-colors"
@@ -71,8 +88,15 @@ export default function Navbar() {
 
             <div className="md:hidden flex items-center space-x-4">
               <ThemeToggle />
-              <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 dark:text-gray-300">
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-600 dark:text-gray-300"
+              >
+                {isOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
@@ -85,41 +109,43 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -10 }}
             className="md:hidden"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-black">
               <Link
                 id="features"
-                className="block px-3 py-2 text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+                className="block px-3 py-2 text-rose-500 dark:text-white hover:text-rose-600 dark:hover:text-rose-600"
               >
                 Features
               </Link>
               <Link
                 to="/"
-                className="block px-3 py-2 text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+                className="block px-3 py-2 text-rose-500 dark:text-white hover:text-rose-600 dark:hover:text-rose-600"
               >
                 Gadgets
               </Link>
               {user && (
                 <Link
                   to="/my-gadgets"
-                  className="block px-3 py-2 text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+                  className="block px-3 py-2 text-rose-500 dark:text-white hover:text-rose-600 dark:hover:text-rose-600"
                 >
                   My Gadgets
                 </Link>
               )}
               <Link
                 to="/"
-                className="block px-3 py-2 text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+                className="block px-3 py-2 text-rose-500 dark:text-white hover:text-rose-600 dark:hover:text-rose-600"
               >
                 Contact
               </Link>
               {user ? (
                 <>
-                  <span className="block px-3 py-2 text-gray-600 dark:text-gray-300">{user.name}</span>
+                  <span className="block px-3 py-2 text-gray-600 dark:text-gray-300">
+                    {user.name}
+                  </span>
                   <button
                     onClick={signOut}
-                    className="w-full text-left px-3 py-2 text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
+                    className="w-full bg-rose-50 border-b border-rose-500  dark:border-b-zinc-700 dark:bg-zinc-900 rounded-md text-left px-3 py-2 text-rose-500 dark:text-rose-500 hover:text-rose-600 dark:hover:text-rose-600"
                   >
-                    Sign Out
+                    <span className="ml-32">Sign Out</span>
                   </button>
                 </>
               ) : (
@@ -135,7 +161,10 @@ export default function Navbar() {
         )}
       </nav>
 
-      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+      />
     </>
   );
 }

@@ -11,15 +11,16 @@ export default function Hero() {
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
                 <span className="block">Rent the Latest</span>
                 <span className="block text-rose-500 dark:text-rose-600">Tech Gadgets Today</span>
+                <span className="block">Rent. Use. Return.</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Access premium gadgets without the premium price tag. From laptops to cameras, gaming consoles to drones - rent what you need, when you need it.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <a href="#gadgets" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-600/90 md:py-4 md:text-lg md:px-10">
+                  <a href="#gadgets" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-600/90 md:py-4 md:text-lg md:px-10 tracking-wide transition-all duration-200 transform hover:scale-105">
                     Explore Rentals
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </a>
                 </div>
               </div>
