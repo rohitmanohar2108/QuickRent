@@ -21,17 +21,20 @@ g)
 
 ### Features page
 
-![Features page](<img width="1413" alt="Features" src="https://github.com/user-attachments/assets/153385c9-1792-4aa0-906d-2cbdf5abb288" />
+![Features page](![image](https://github.com/user-attachments/assets/26e27ed1-6302-44b1-a7f2-6786436cec81)
+
 )
 
 ### Availiable Gadgets Page
 
-![Availiable Gadgets Page](<img width="1454" alt="Available gadget" src="https://github.com/user-attachments/assets/10c60bff-b849-4e7f-8a6e-94ca259c0dad" />
+![Availiable Gadgets Page](![image](https://github.com/user-attachments/assets/ad0bccb8-2ff0-4a11-9e2a-09da3758c139)
+
 )
 
 ### Conatct page
 
-![Conatct page](<img width="1451" alt="Constact" src="https://github.com/user-attachments/assets/e3c39dd0-bf3b-4cd0-846a-c21245d34757" />
+![Conatct page](![image](https://github.com/user-attachments/assets/6c8b341f-c323-49ff-b595-05c3a1a01d01)
+
 )
 
 ## Instructions to Set Up and Run the Project
