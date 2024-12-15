@@ -73,7 +73,7 @@ export default function Navbar() {
                   </span>
                   <button
                     onClick={signOut}
-                    className="bg-rose-600 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 transition-colors"
+                    className="bg-rose-600 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 transition-colors border-b border-rose-400"
                   >
                     Sign Out
                   </button>
@@ -81,7 +81,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setShowAuthModal(true)}
-                  className="bg-rose-700 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 transition-colors"
+                  className="bg-rose-700 text-white px-4 py-2 rounded-md hover:bg-rose-600/90 transition-colors  border-b border-rose-400"
                 >
                   Sign Up
                 </button>
@@ -103,7 +103,7 @@ export default function Navbar() {
                   </Tooltip>
                   <button
                     onClick={signOut}
-                    className="bg-rose-600 text-white text-sm px-3 py-1.5 rounded-md hover:bg-rose-600/90 transition-colors"
+                    className="bg-rose-600 text-white text-sm px-3 py-1.5 rounded-md hover:bg-rose-600/90 transition-colors border-b border-rose-400"
                   >
                     Sign Out
                   </button>
@@ -111,7 +111,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setShowAuthModal(true)}
-                  className="bg-rose-700 text-white text-sm px-3 py-1.5 rounded-md hover:bg-rose-600/90 transition-colors"
+                  className="bg-rose-700 text-white text-sm px-3 py-1.5 rounded-md hover:bg-rose-600/90 transition-colors border-b border-rose-400"
                 >
                   Sign Up
                 </button>
