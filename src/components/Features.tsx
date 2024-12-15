@@ -130,7 +130,7 @@ export default function Features() {
           {isMobile ? (
             <>
               {/* Navigation Buttons */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none px-4 md:px-8">
+              <div className="absolute top-1/2  -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none px-4 md:px-8">
                 {showLeftButton && (
                   <button
                     onClick={() => scroll('left')}
