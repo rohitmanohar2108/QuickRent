@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowBigDownDash, ArrowRight, Check, ChevronDown } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 const gadgets = [
@@ -67,7 +67,7 @@ export default function GadgetList() {
           </p>
         </div>
 
-        {/* Mobile view: Horizontal scroll */}
+        {/* mobile view: horizontal scroll */}
         <div className="block lg:hidden overflow-x-auto pb-6 -mx-4 scrollbar-hide">
           <div className="flex px-4 space-x-4 min-w-max">
             {gadgets.map((gadget) => (
@@ -110,7 +110,7 @@ export default function GadgetList() {
           </div>
         </div>
 
-        {/* Desktop view: Grid layout */}
+        {/* desktop view: grid layout */}
         <div className="hidden lg:grid grid-cols-3 gap-8 mt-12">
           {gadgets.map((gadget) => (
             <motion.div
@@ -152,11 +152,14 @@ export default function GadgetList() {
         </div>
 
         <div className="mt-16 text-center">
+          <button className="hidden sm:block absolute bottom left-1/2 -translate-x-1/2 text-rose-600 transition-colors  touch-highlight ">
+            <ArrowBigDownDash className="w-8 h-8 animate-bounce" />
+          </button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleListGadget}
-            className="inline-flex items-center px-6 py-3 border border-rose-600 text-rose-600 dark:text-white dark:border-rose-600 rounded-md hover:bg-rose-50 dark:hover:bg-rose-900/50 transition-colors"
+            className="inline-flex items-center px-6 py-3 border lg:mt-9 border-rose-600 text-rose-600 dark:text-white dark:border-rose-600 rounded-md hover:bg-rose-50 dark:hover:bg-rose-900/50 transition-colors"
           >
             List Your Gadget for Rent
             <ArrowRight className="ml-2 h-5 w-5" />

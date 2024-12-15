@@ -72,7 +72,6 @@ export default function Features() {
   const [showRightButton, setShowRightButton] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Lottie Animation Options
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -158,7 +157,6 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Features Section */}
         <div className="mt-20 relative">
           {isMobile ? (
             <>
@@ -186,7 +184,7 @@ export default function Features() {
               </div>
             </>
           ) : (
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-4 gap-8">
               {features.map((feature) => (
                 <FeatureCard key={feature.name} feature={feature} />
               ))}
@@ -194,10 +192,8 @@ export default function Features() {
           )}
         </div>
         <div className="relative lg:flex lg:items-center lg:justify-center lg:gap-12">
-          {/* Text Content */}
           <div className="text-center mb-8 mt-14 lg:text-left lg:w-1/2">
             <div className="flex items-center space-x-2">
-              {/* Announcement Icon */}
               <IoMdMegaphone className="hidden sm:block w-16 h-16 sm:w-32 sm:h-32 lg:w-44 lg:h-44 text-rose-600 dark:text-rose-500" />
 
               <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-rose-600 dark:text-rose-500 mb-4">
@@ -205,22 +201,18 @@ export default function Features() {
               </h3>
             </div>
 
-            {/* Subheading */}
             <h4 className="lg:text-3xl text-xl font-medium text-gray-700 dark:text-gray-200 mb-6">
               Delivery at Your Fingertips!
             </h4>
 
-            {/* Decorative Line */}
             <div className="w-16 h-1 bg-rose-600 dark:bg-rose-500 mx-auto lg:mx-0 mb-6"></div>
 
-            {/* Description */}
             <p className="text-gray-600 dark:text-gray-400 lg:text-lg mb-6">
               Get ready for an innovative way to experience lightning-fast
               delivery services over worldwide. We are introducing an
               extraordinary feature to bring convenience right to your doorstep!
             </p>
 
-            {/* Call-to-Action Buttons */}
             <div className="flex flex-row flex-wrap items-center gap-4 justify-center lg:justify-start">
               <button className="px-6 py-3 bg-rose-600 text-white rounded-lg shadow-lg hover:bg-rose-700 transition-all duration-300">
                 Learn More
@@ -231,7 +223,6 @@ export default function Features() {
             </div>
           </div>
 
-          {/* Animation */}
           <div className="flex justify-center lg:w-1/2">
             <Lottie
               options={defaultOptions}
