@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Laptop, User } from "lucide-react";
+import { Laptop, Laptop2, LaptopIcon, Monitor, User } from "lucide-react";
 import { motion } from "framer-motion";
 import ThemeToggle from "./ui/ThemeToggle";
 import AuthModal from "./auth/AuthModal";
