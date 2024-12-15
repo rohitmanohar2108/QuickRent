@@ -12,7 +12,9 @@ import {
   Tag,
   ChevronLeft,
   ChevronRight,
+  Megaphone,
 } from "lucide-react";
+import { IoMdMegaphone } from "react-icons/io";
 
 const features = [
   {
@@ -194,10 +196,14 @@ export default function Features() {
         <div className="relative lg:flex lg:items-center lg:justify-center lg:gap-12">
           {/* Text Content */}
           <div className="text-center mb-8 mt-14 lg:text-left lg:w-1/2">
-            {/* Main Heading */}
-            <h3 className="lg:text-5xl text-2xl font-semibold text-rose-600 dark:text-rose-500 sm:text-4xl mb-4">
-              Spacial Feature Coming Soon!
-            </h3>
+            <div className="flex items-center space-x-2">
+              {/* Announcement Icon */}
+              <IoMdMegaphone className="hidden sm:block w-16 h-16 sm:w-32 sm:h-32 lg:w-44 lg:h-44 text-rose-600 dark:text-rose-500" />
+
+              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-rose-600 dark:text-rose-500 mb-4">
+                Spacial Feature Coming Soon!
+              </h3>
+            </div>
 
             {/* Subheading */}
             <h4 className="lg:text-3xl text-xl font-medium text-gray-700 dark:text-gray-200 mb-6">
