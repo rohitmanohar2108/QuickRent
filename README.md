@@ -55,7 +55,13 @@ Follow the instructions below to set up and run the project locally:
 
 Clone the repository to your local machine:
 
-```bash
-git clone https://github.com/your-username/quickrent.git
-npm install
+
+To run this project, you can clone the repo and run the following commands: <br>
+`git clone`<br>
+
+and run :<br>
+`npm install`<br>
+
+and then  :<br>
+`npm run dev`<br>
 
