@@ -44,11 +44,16 @@ QuickRent is a web application that allows users to easily explore, rent, and ma
 
 ## Instructions to Set Up and Run the Project
 
-To run this project locally, follow the steps below:
+Follow these steps to set up and run the QuickRent platform locally:
+
+
+## Instructions to Set Up and Run the Project
+
+Follow the instructions below to set up and run the project locally:
 
 ### 1. Clone the Repository
 
-First, clone the project repository to your local machine:
+Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/your-username/quickrent.git
