@@ -118,7 +118,7 @@ export default function Features() {
   };
 
   const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
-    <div className="bg-white dark:bg-zinc-900 shadow-lg px-6 py-8 rounded-xl hover:shadow-xl transition-shadow duration-300 dark:border dark:border-zinc-800 dark:hover:border-zinc-700 h-full">
+    <div className="bg-white dark:bg-zinc-900 shadow-lg px-6 py-8 rounded-xl hover:shadow-xl transition-shadow duration-300 dark:border dark:border-zinc-800 dark:hover:border-white h-full">
       <div className="flex flex-col h-full">
         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-rose-600 text-white mb-6">
           <feature.icon className="h-6 w-6" aria-hidden="true" />

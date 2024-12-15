@@ -96,13 +96,13 @@ export default function ContactForm() {
                     Phone
                   </p>
                   <p className="mt-1 text-gray-600 dark:text-gray-400">
-                    +1 (555) 123-4567
+                    +91 1234567890
                   </p>
                 </div>
               </a>
 
               <a
-                href="https://www.google.com/maps/search/123+Tech+Street,+San+Francisco,+CA+94105"
+                href="https://www.google.com/maps/search/NIT+Karnataka"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start  p-2 rounded"
@@ -113,9 +113,10 @@ export default function ContactForm() {
                     Location
                   </p>
                   <p className="mt-1 text-gray-600 dark:text-gray-400">
-                    123 Tech Street
+                    123 Tech Street Park
                     <br />
-                    San Francisco, CA 94105
+                    Bangalore, Ka, India 
+                    530068
                   </p>
                 </div>
               </a>
