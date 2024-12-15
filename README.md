@@ -2,6 +2,8 @@
 
 QuickRent is a web application that allows users to easily explore, rent, and manage gadgets online. Whether it's laptops, cameras, or other tech gadgets. QuickRent offers a smooth and seamless platform for gadget rentals. The app supports dark and light modes, and smooth scrolling navigation. It is built using React, TypeScript, Context API, and Tailwind CSS for styling, with a focus on a clean, responsive design.
 
+## Deployed Website
+ Visit it here: [QuickRent]([https://your-deployed-site-link.com](https://quick-rent-three.vercel.app/))
 
 
 ## Features
