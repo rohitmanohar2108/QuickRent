@@ -44,11 +44,6 @@ QuickRent is a web application that allows users to easily explore, rent, and ma
 
 ## Instructions to Set Up and Run the Project
 
-Follow these steps to set up and run the QuickRent platform locally:
-
-
-## Instructions to Set Up and Run the Project
-
 Follow the instructions below to set up and run the project locally:
 
 
