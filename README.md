@@ -17,8 +17,8 @@ QuickRent is a web application that allows users to easily explore, rent, and ma
 
 ### Homepage
 
-![Home Page](![image](https://github.com/user-attachments/assets/b8fde93a-0c8e-4ea6-8a69-6422cd9ce748)
-g)
+(![image](https://github.com/user-attachments/assets/b8fde93a-0c8e-4ea6-8a69-6422cd9ce748)
+
 
 ### Features page
 
