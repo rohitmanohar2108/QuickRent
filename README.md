@@ -37,6 +37,11 @@ g)
 
 )
 
+### Sign Up page
+
+![signUp page](![image](https://github.com/user-attachments/assets/267c0051-8c46-4d1e-8fd8-fea1ff010975)
+)
+
 ## Instructions to Set Up and Run the Project
 
 To run this project locally, follow the steps below:
