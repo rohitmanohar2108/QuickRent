@@ -71,7 +71,10 @@ export default function ContactForm() {
 
           <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-lg p-8">
             <div className="space-y-8">
-              <div className="flex items-start">
+              <a
+                href="mailto:contact@quickrent.com"
+                className="flex items-start p-2 rounded"
+              >
                 <Mail className="flex-shrink-0 h-6 w-6 text-rose-600" />
                 <div className="ml-3">
                   <p className="text-lg font-medium text-gray-900 dark:text-white">
@@ -81,9 +84,12 @@ export default function ContactForm() {
                     contact@quickrent.com
                   </p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-start">
+              <a
+                href="tel:+15551234567"
+                className="flex items-start  p-2 rounded"
+              >
                 <Phone className="flex-shrink-0 h-6 w-6 text-rose-600" />
                 <div className="ml-3">
                   <p className="text-lg font-medium text-gray-900 dark:text-white">
@@ -93,9 +99,14 @@ export default function ContactForm() {
                     +1 (555) 123-4567
                   </p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-start">
+              <a
+                href="https://www.google.com/maps/search/123+Tech+Street,+San+Francisco,+CA+94105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start  p-2 rounded"
+              >
                 <MapPin className="flex-shrink-0 h-6 w-6 text-rose-600" />
                 <div className="ml-3">
                   <p className="text-lg font-medium text-gray-900 dark:text-white">
@@ -107,7 +118,7 @@ export default function ContactForm() {
                     San Francisco, CA 94105
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
