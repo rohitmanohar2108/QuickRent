@@ -1,8 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
+import Lottie from "react-lottie";
+import animationData from "../Animations/animatio.json";
 import {
   Package,
   Truck,
-  Shield,
   ShieldCheck,
   Hourglass,
   Leaf,
@@ -68,6 +69,16 @@ export default function Features() {
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+
+  // Lottie Animation Options
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const checkScrollButtons = () => {
     if (scrollContainerRef.current && isMobile) {
@@ -136,7 +147,7 @@ export default function Features() {
   return (
     <div id="features" className="py-24 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <div className="text-center mb-16">
           <h2 className="text-base text-rose-500 font-semibold tracking-wide uppercase">
             Features
           </h2>
@@ -145,11 +156,10 @@ export default function Features() {
           </p>
         </div>
 
+        {/* Features Section */}
         <div className="mt-20 relative">
-          {/* Mobile Scrollable View */}
           {isMobile ? (
             <>
-              {/* Navigation Buttons */}
               <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none px-4 md:px-8">
                 {showRightButton && (
                   <button
@@ -162,16 +172,9 @@ export default function Features() {
                 )}
               </div>
 
-              {/* Scrollable Container */}
               <div
                 ref={scrollContainerRef}
-                className="grid grid-flow-col auto-cols-[85%] md:auto-cols-[45%] gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar"
-                style={{
-                  scrollbarWidth: "none",
-                  msOverflowStyle: "none",
-                  WebkitOverflowScrolling: "touch",
-                  padding: "0.5rem",
-                }}
+                className="grid grid-flow-col auto-cols-[85%] md:auto-cols-[45%] gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
               >
                 {features.map((feature) => (
                   <div key={feature.name} className="snap-start">
@@ -181,7 +184,6 @@ export default function Features() {
               </div>
             </>
           ) : (
-            // Desktop Grid View
             <div className="grid grid-cols-3 gap-8">
               {features.map((feature) => (
                 <FeatureCard key={feature.name} feature={feature} />
@@ -189,7 +191,51 @@ export default function Features() {
             </div>
           )}
         </div>
+        <div className="relative lg:flex lg:items-center lg:justify-center lg:gap-12">
+          {/* Text Content */}
+          <div className="text-center mb-8 mt-14 lg:text-left lg:w-1/2">
+            {/* Main Heading */}
+            <h3 className="lg:text-5xl text-2xl font-semibold text-rose-600 dark:text-rose-500 sm:text-4xl mb-4">
+              Spacial Feature Coming Soon!
+            </h3>
+
+            {/* Subheading */}
+            <h4 className="lg:text-3xl text-xl font-medium text-gray-700 dark:text-gray-200 mb-6">
+              Delivery at Your Fingertips!
+            </h4>
+
+            {/* Decorative Line */}
+            <div className="w-16 h-1 bg-rose-600 dark:bg-rose-500 mx-auto lg:mx-0 mb-6"></div>
+
+            {/* Description */}
+            <p className="text-gray-600 dark:text-gray-400 lg:text-lg mb-6">
+              Get ready for an innovative way to experience lightning-fast
+              delivery services over worldwide. We are introducing an
+              extraordinary feature to bring convenience right to your doorstep!
+            </p>
+
+            {/* Call-to-Action Buttons */}
+            <div className="flex flex-row flex-wrap items-center gap-4 justify-center lg:justify-start">
+              <button className="px-6 py-3 bg-rose-600 text-white rounded-lg shadow-lg hover:bg-rose-700 transition-all duration-300">
+                Learn More
+              </button>
+              <button className="px-6 py-3 border border-rose-600 text-rose-600 dark:text-white dark:border-rose-600 rounded-md hover:bg-rose-50 dark:hover:bg-rose-900/50 transition-colors">
+                Notify Me
+              </button>
+            </div>
+          </div>
+
+          {/* Animation */}
+          <div className="flex justify-center lg:w-1/2">
+            <Lottie
+              options={defaultOptions}
+              height={isMobile ? 300 : 600}
+              width={isMobile ? 300 : 600}
+            />
+          </div>
+        </div>
       </div>
+      <div></div>
     </div>
   );
 }

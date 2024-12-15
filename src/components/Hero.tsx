@@ -1,7 +1,10 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
+
 export default function Hero() {
+  
+
   return (
     <div className="relative bg-white dark:bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -18,7 +21,10 @@ export default function Hero() {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <a href="#gadgets" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-600/90 md:py-4 md:text-lg md:px-10 tracking-wide transition-all duration-200 transform hover:scale-105">
+                  <a
+                    href="#gadgets"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-600/90 md:py-4 md:text-lg md:px-10 tracking-wide transition-all duration-200 transform hover:scale-105"
+                  >
                     Explore Rentals
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </a>
@@ -35,6 +41,7 @@ export default function Hero() {
           alt="Tech gadgets collection"
         />
       </div>
+      
     </div>
   );
 }
