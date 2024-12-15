@@ -51,10 +51,6 @@ Follow these steps to set up and run the QuickRent platform locally:
 
 Follow the instructions below to set up and run the project locally:
 
-### 1. Clone the Repository
-
-Clone the repository to your local machine:
-
 
 To run this project, you can clone the repo and run the following commands: <br>
 `git clone`<br>
