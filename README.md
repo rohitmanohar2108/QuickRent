@@ -53,7 +53,7 @@ Follow the instructions below to set up and run the project locally:
 
 
 To run this project, you can clone the repo and run the following commands: <br>
-`git clone`<br>
+`git clone  https://github.com/rohitmanohar2108/QuickRent.git`<br>
 
 and run :<br>
 `npm install`<br>
