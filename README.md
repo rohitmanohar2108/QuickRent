@@ -40,8 +40,8 @@ g)
 
 ### Sign Up page
 
-![signUp page](![image](https://github.com/user-attachments/assets/267c0051-8c46-4d1e-8fd8-fea1ff010975)
-)
+![signUp page](![image](https://github.com/user-attachments/assets/5a29dc64-51aa-4c9c-9383-3840521fdd1b)
+
 
 ## Instructions to Set Up and Run the Project
 
