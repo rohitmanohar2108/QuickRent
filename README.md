@@ -17,30 +17,29 @@ QuickRent is a web application that allows users to easily explore, rent, and ma
 
 ### Homepage
 
-(![image](https://github.com/user-attachments/assets/b8fde93a-0c8e-4ea6-8a69-6422cd9ce748)
+![image](https://github.com/user-attachments/assets/b8fde93a-0c8e-4ea6-8a69-6422cd9ce748)
 
 
 ### Features page
 
-![Features page](![image](https://github.com/user-attachments/assets/26e27ed1-6302-44b1-a7f2-6786436cec81)
+![image](https://github.com/user-attachments/assets/26e27ed1-6302-44b1-a7f2-6786436cec81)
 
-)
+
 
 ### Availiable Gadgets Page
 
-![Availiable Gadgets Page](![image](https://github.com/user-attachments/assets/ad0bccb8-2ff0-4a11-9e2a-09da3758c139)
+![image](https://github.com/user-attachments/assets/ad0bccb8-2ff0-4a11-9e2a-09da3758c139)
 
-)
+
 
 ### Conatct page
 
-![Conatct page](![image](https://github.com/user-attachments/assets/6c8b341f-c323-49ff-b595-05c3a1a01d01)
+![image](https://github.com/user-attachments/assets/6c8b341f-c323-49ff-b595-05c3a1a01d01)
 
-)
 
 ### Sign Up page
 
-![signUp page](![image](https://github.com/user-attachments/assets/5a29dc64-51aa-4c9c-9383-3840521fdd1b)
+![image](https://github.com/user-attachments/assets/5a29dc64-51aa-4c9c-9383-3840521fdd1b)
 
 
 ## Instructions to Set Up and Run the Project
