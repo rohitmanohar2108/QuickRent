@@ -1,30 +1,47 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Package, Truck, Shield, ShieldCheck, Hourglass, Leaf, Repeat, Headphones, Tag, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Package,
+  Truck,
+  Shield,
+  ShieldCheck,
+  Hourglass,
+  Leaf,
+  Repeat,
+  Headphones,
+  Tag,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const features = [
   {
     name: "Wide Variety of Gadgets",
-    description: "Explore our latest tech gadgets: laptops, cameras, gaming consoles, and much more.",
+    description:
+      "Explore our latest tech gadgets: laptops, cameras, gaming consoles, and much more.",
     icon: Package,
   },
   {
     name: "Quick Delivery",
-    description: "Get your rented gadgets delivered to your doorstep within 24 hours of confirmation.",
+    description:
+      "Get your rented gadgets delivered to your doorstep within 24 hours of confirmation.",
     icon: Truck,
   },
   {
     name: "Flexible Duration",
-    description: "Rent for a day, week, or month. Extend or return early based on your needs.",
+    description:
+      "Rent for a day, week, or month. Extend or return early based on your needs.",
     icon: Hourglass,
   },
   {
     name: "Damage Protection",
-    description: "All rentals come with comprehensive damage protection for peace of mind.",
+    description:
+      "All rentals come with comprehensive damage protection for peace of mind.",
     icon: ShieldCheck,
   },
   {
     name: "Eco-Friendly Packaging",
-    description: "Sustainable and recyclable packaging options to reduce environmental impact.",
+    description:
+      "Sustainable and recyclable packaging options to reduce environmental impact.",
     icon: Leaf,
   },
   {
@@ -34,12 +51,14 @@ const features = [
   },
   {
     name: "24/7 Customer Support",
-    description: "Always-available customer care via chat, email, or phone for quick issue resolution.",
+    description:
+      "Always-available customer care via chat, email, or phone for quick issue resolution.",
     icon: Headphones,
   },
   {
     name: "Exclusive Deals and Discounts",
-    description: "Regular sales, limited-time offers, and special deals for members.",
+    description:
+      "Regular sales, limited-time offers, and special deals for members.",
     icon: Tag,
   },
 ];
@@ -52,7 +71,8 @@ export default function Features() {
 
   const checkScrollButtons = () => {
     if (scrollContainerRef.current && isMobile) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
       setShowLeftButton(scrollLeft > 0);
       setShowRightButton(scrollLeft < scrollWidth - clientWidth - 10);
     }
@@ -64,40 +84,40 @@ export default function Features() {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (container && isMobile) {
-      container.addEventListener('scroll', checkScrollButtons);
+      container.addEventListener("scroll", checkScrollButtons);
       checkScrollButtons();
     }
     return () => {
       if (container) {
-        container.removeEventListener('scroll', checkScrollButtons);
+        container.removeEventListener("scroll", checkScrollButtons);
       }
     };
   }, [isMobile]);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
-      const cardWidth = container.querySelector('div')?.offsetWidth || 0;
-      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
-      
+      const cardWidth = container.querySelector("div")?.offsetWidth || 0;
+      const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+
       container.scrollBy({
         left: scrollAmount,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
-  const FeatureCard = ({ feature }: { feature: typeof features[0] }) => (
+  const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
     <div className="bg-white dark:bg-zinc-900 shadow-lg px-6 py-8 rounded-xl hover:shadow-xl transition-shadow duration-300 dark:border dark:border-zinc-800 dark:hover:border-zinc-700 h-full">
       <div className="flex flex-col h-full">
         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-rose-600 text-white mb-6">
@@ -130,20 +150,11 @@ export default function Features() {
           {isMobile ? (
             <>
               {/* Navigation Buttons */}
-              <div className="absolute top-1/2  -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none px-4 md:px-8">
-                {showLeftButton && (
-                  <button
-                    onClick={() => scroll('left')}
-                    className="p-2 rounded-full bg-white/90 dark:bg-zinc-800/90 shadow-lg pointer-events-auto hover:bg-white dark:hover:bg-zinc-700 transition-colors transform -translate-x-2"
-                    aria-label="Scroll left"
-                  >
-                    <ChevronLeft className="h-6 w-6 text-gray-600 dark:text-gray-300" />
-                  </button>
-                )}
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none px-4 md:px-8">
                 {showRightButton && (
                   <button
-                    onClick={() => scroll('right')}
-                    className="p-2 rounded-full bg-white/90 dark:bg-zinc-800/90 shadow-lg pointer-events-auto hover:bg-white dark:hover:bg-zinc-700 transition-colors transform translate-x-2"
+                    onClick={() => scroll("right")}
+                    className="p-2 rounded-full ml-64 bg-white/90 dark:bg-zinc-800/90 shadow-lg pointer-events-auto hover:bg-white dark:hover:bg-zinc-700 transition-colors transform translate-x-2"
                     aria-label="Scroll right"
                   >
                     <ChevronRight className="h-6 w-6 text-gray-600 dark:text-gray-300" />
@@ -152,14 +163,14 @@ export default function Features() {
               </div>
 
               {/* Scrollable Container */}
-              <div 
+              <div
                 ref={scrollContainerRef}
                 className="grid grid-flow-col auto-cols-[85%] md:auto-cols-[45%] gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar"
                 style={{
-                  scrollbarWidth: 'none',
-                  msOverflowStyle: 'none',
-                  WebkitOverflowScrolling: 'touch',
-                  padding: '0.5rem'
+                  scrollbarWidth: "none",
+                  msOverflowStyle: "none",
+                  WebkitOverflowScrolling: "touch",
+                  padding: "0.5rem",
                 }}
               >
                 {features.map((feature) => (
